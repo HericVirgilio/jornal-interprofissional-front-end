@@ -1,8 +1,13 @@
 import Link from "next/link"
+import Header from "@/src/header"
 export default function Home() {
   return (
     <main>
-      <h1>Home</h1>
+      <Header/>
+    </main>
+  )
+}
+/*
       <Link href={"/noticias"}>
         <p>noticias</p>
       </Link>
@@ -12,6 +17,4 @@ export default function Home() {
       <Link href={"/sobre"}>
         <p>sobre</p>
       </Link>
-    </main>
-  )
-}
+      */
