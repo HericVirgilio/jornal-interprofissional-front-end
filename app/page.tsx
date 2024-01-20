@@ -1,9 +1,11 @@
-import Link from "next/link"
 import Header from "@/src/header"
+import Footer from "@/src/footer"
+
 export default function Home() {
   return (
     <main>
       <Header/>
+      <Footer/>
     </main>
   )
 }
