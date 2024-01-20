@@ -1,0 +1,45 @@
+.conjunto_rodape {
+    margin-top: 2%;
+    display: flex;
+    flex-direction: column;
+}
+
+.creditos_rodape{
+    background-color: #f7f9fd;
+    display: flex;
+    position: relative;
+    left: 0;
+    flex-direction: column;
+    height: 20vh;
+    width: 100%;
+    padding: 2% 0% 0% 12%;
+    justify-content: center;
+}
+
+.titulo_rodape {
+    font-size: 25px;
+    font-weight: bolder;
+    margin-bottom: 5px;
+}
+
+li {
+    line-height: 2;
+    color: #7A7A7A;
+    list-style: none;
+}
+
+li a{
+    padding-right: 10px;
+}
+
+.footer{
+    background-color: #f7f9fd;
+    display: flex;
+    position: relative;
+    bottom: 0;
+    left: 0;
+    align-items: center;
+    height: 10vh;
+    width: 100%;
+    padding-left: 10%;
+}
