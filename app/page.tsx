@@ -1,9 +1,13 @@
-import Link from "next/link"
 import Header from "@/src/header"
+import Footer from "@/src/footer"
+import Menu from "@/src/menu"
+
 export default function Home() {
   return (
     <main>
       <Header/>
+      <Footer/>
+      <Menu/>
     </main>
   )
 }

@@ -1,0 +1,17 @@
+.menu_lista{
+    display: flex;
+    list-style: none;
+}
+
+.link_menu{
+    font-weight: 700;
+    color: #7e8687;
+    padding: 13px 25px 5px 25px;
+    text-decoration: none;
+}
+
+.link_menu:hover{
+    color: #61ce70;
+    border-bottom: 3px solid;
+    transition: 0.1s;
+}
