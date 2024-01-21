@@ -1,4 +1,3 @@
-import Menu from '@/src/menu'
 import './style.css'
 export default function Footer() {
     return (
@@ -13,11 +12,6 @@ export default function Footer() {
                     <li><a href="https://www.instagram.com/claudio.pales" className='link'><span className='cor_destaque_link'>@claudio.pales</span></a>Claudio Pales</li>
                     <li><a href="https://www.instagram.com/jpales_" className='link'><span className='cor_destaque_link'>@jpales_</span></a>João Pedro Pales</li>
                 </ul>
-            </div>
-
-
-            <div className='footer'>
-                <Menu />
             </div>
         </div>
     )
