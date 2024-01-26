@@ -1,9 +1,11 @@
 import Link from "next/link"
 import Header from "@/src/header"
+import Implementation from "@/src/Implementation"
 export default function Home() {
   return (
     <main>
       <Header/>
+      <Implementation/>
     </main>
   )
 }
