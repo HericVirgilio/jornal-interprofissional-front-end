@@ -1,11 +1,15 @@
-import Link from "next/link"
 import Header from "@/src/header"
-import Implementation from "@/src/Implementation"
+import Banner from "@/src/banner"
+import Footer from "@/src/footer"
+import Menu from "@/src/menu"
+
 export default function Home() {
   return (
     <main>
       <Header/>
-      <Implementation/>
+      <Banner/>
+      <Footer/>
+      <Menu/>
     </main>
   )
 }
