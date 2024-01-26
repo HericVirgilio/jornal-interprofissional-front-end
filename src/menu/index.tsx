@@ -4,7 +4,7 @@ export default function Menu() {
         <div className='menu'>
             <ul className='menu_lista'>
                 
-                <li><a href='inicio' className='link_menu'>Início</a></li>
+                <li><a href='/' className='link_menu'>Início</a></li>
 
                 <li><a href='noticias' className='link_menu'>Notícias</a></li>
                 
