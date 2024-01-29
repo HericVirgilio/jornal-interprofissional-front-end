@@ -11,5 +11,5 @@ export default function Page() {
       <Footer />
       <Menu />
     </main>
-  );
+  )
 }
