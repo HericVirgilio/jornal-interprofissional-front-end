@@ -10,7 +10,7 @@ export default function Sobre() {
 
                 <div className="card-sobre">
 
-                    <h2>Bruno Moreira Lima</h2>
+                    <h2 className="nome-dev">Bruno Moreira Lima</h2>
 
                     <Image
                         src='/images/devs/Bruno.jpg'
@@ -34,7 +34,7 @@ export default function Sobre() {
 
                 <div className="card-sobre">
 
-                    <h2>Claudio Pales Costa</h2>
+                    <h2 className="nome-dev">Claudio Pales Costa</h2>
 
                     <Image
                         src='/images/devs/Claudio.jpg'
@@ -57,7 +57,7 @@ export default function Sobre() {
 
                 <div className="card-sobre">
 
-                    <h2>Heric Virgilio Viana</h2>
+                    <h2 className="nome-dev">Heric Virgilio Viana</h2>
 
                     <Image
                         src='/images/devs/Heric.jpg'
