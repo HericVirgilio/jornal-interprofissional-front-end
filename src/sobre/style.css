@@ -4,6 +4,10 @@
     margin: 0 7% 0 7%;
 }
 
+.nome-dev {
+    padding-bottom: 3%;
+}
+
 .card-sobre {
     width: 40%;
     display: flex;
@@ -22,10 +26,10 @@
 }
 
 .link-instagram::before {
-        content: url('/images/icons/instagram.png');
-        display: inline-block;
-        width: 30px;
-        height: 30px;
-        margin-right: 5px;
-        vertical-align: middle;
+    content: url('/images/icons/instagram.png');
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    margin-right: 5px;
+    vertical-align: middle;
 }
