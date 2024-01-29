@@ -1,4 +1,4 @@
-*{
+* {
   margin: 0;
   padding: 0;
 }
@@ -7,10 +7,37 @@ body {
   font-size: 16px;
 }
 
-.link{
+.link {
   text-decoration: none;
 }
 
 .cor_destaque_link {
+  list-style: none;
+  text-decoration: none;
   color: #c36;
+}
+
+.titulo-pagina {
+  text-align: center;
+  margin: 3% 0 3% 0;
+}
+
+h1 {
+  color: #000000;
+  font-size: 40px;
+}
+
+h2 {
+  color: #7A7A7A;
+  font-size: 18px;
+}
+
+h3 {
+  color: #7A7A7A;
+  font-size: 16px;
+}
+
+p {
+  color: #7A7A7A;
+  font-size: 16px;
 }

@@ -1,16 +1,18 @@
+import Link from 'next/link'
 import './style.css'
+
 export default function Menu() {
     return (
         <div className='menu'>
             <ul className='menu_lista'>
                 
-                <li><a href='/' className='link_menu'>Início</a></li>
+                <li><Link href='/' className='link_menu'>Início</Link></li>
 
-                <li><a href='noticias' className='link_menu'>Notícias</a></li>
+                <li><Link href='noticias' className='link_menu'>Notícias</Link></li>
                 
-                <li><a href='edicoes' className='link_menu'>Edições</a></li>
+                <li><Link href='edicoes' className='link_menu'>Edições</Link></li>
                 
-                <li><a href='sobre' className='link_menu'>Sobre</a></li>
+                <li><Link href='sobre' className='link_menu'>Sobre</Link></li>
             </ul>
         </div>
     )
