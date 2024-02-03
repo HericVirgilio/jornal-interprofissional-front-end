@@ -1,19 +1,32 @@
-.logo-site {
-    margin-right: 20px;
-    vertical-align: middle;
-}
-
-.titulo-site {
-    font-size: 32px;
-    color: black;
-    font-weight: 600;
-    text-decoration: none;
-}
-
-.cabecalho{
+.cabecalho-container {
+    position: sticky;
+    z-index: 1000;
+    top: 0;
     background-color: #f7f9fd;
     display: flex;
     align-items: center;
     justify-content: space-around;
-    height: 12vh;
-}
+    width: 100%;
+    transition: height 0.3s; /* Adiciona uma transição suave para a altura */
+  }
+  
+  .cabecalho-expandido, .menu {
+    height: 12vh; /* Altura inicial do cabeçalho expandido */
+  }
+  
+  .cabecalho-recolhido, .menu{
+    height: 8vh; /* Altura do cabeçalho quando recolhido */
+  }
+  
+  .logo-site {
+    margin-right: 20px;
+    vertical-align: middle;
+  }
+  
+  .titulo-site {
+    font-size: 32px;
+    color: black;
+    font-weight: 600;
+    text-decoration: none;
+  }
+  
