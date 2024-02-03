@@ -1,18 +1,16 @@
-.noticias{
+.noticias-container{
     display: flex;
-    margin-left: 20px;
+    margin: 0 5%;
     flex-direction: row;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
+    margin-bottom: 50px;
 }
 .materia{
-  /* flex: 1; */
-  /* background-color: aqua; */
-  
   width: 300px;
   height: 300px; 
   word-wrap: break-word;
-  
+  text-align: center;
 }
 .materia p{
     margin-top: 20px;
@@ -28,13 +26,12 @@
     height: 150px; 
 }
 
-.readmore{
+.leiamais{
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
     font-size: 12px;
     color: rgb(86, 167, 4);
     text-decoration: none;
     font-weight: bold;
-    text-align: left;
-    align-items: left;
-    
-    
 }
