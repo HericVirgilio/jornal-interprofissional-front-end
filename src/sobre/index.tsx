@@ -18,7 +18,7 @@ export default function Sobre() {
                         width={320}
                         height={320}
                         className='img-dev'
-                        priority='false'
+                        priority={true}
                     />
 
                     <p className="card-descricao">Cosplayer, apaixonado por Impressão 3D e por contruir “coisas” com Arduíno. Bruno é o que está sempre envolvido nos projetos que acontecem, sempre levando consigo o Just Dance e o Beat Saber para animar qualquer evento.</p>
@@ -43,7 +43,7 @@ export default function Sobre() {
                         width={320}
                         height={320}
                         className='img-dev'
-                        priority='false'
+                        priority={true}
                     />
 
                     <p className="card-descricao">Primeira pessoa que vem a mente quando se fala de um bom Sumô Robô. Claudio passa a maior parte do seu tempo calibrando a mesa da Impressora 3D e está sempre topando qualquer projeto.</p>
@@ -67,7 +67,7 @@ export default function Sobre() {
                         width={320}
                         height={320}
                         className='img-dev'
-                        priority='false'
+                        priority={true}
                     />
 
                     <p className="card-descricao">Membro mais experiente da equipe quando se trata de Desenvolvimento Web. Está sempre mantendo o grupo unido e motivado para realizar a construção do site. Isso quando não está assistindo animes, é claro.</p>

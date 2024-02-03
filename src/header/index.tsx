@@ -36,6 +36,7 @@ export default function Header() {
           height={50}
           alt='Logo Jornal Interprofissional'
           className='logo-site'
+          priority={true}
         />
         Jornal Interprofissional
       </Link>

@@ -12,6 +12,7 @@ export default function Editions() {
                     alt='Capa da revista'
                     width={171}
                     height={158}
+                    priority={true}
                 />
 
                 <h2>Primeira edição do Jornal Interprofissional</h2>

@@ -56,7 +56,7 @@ const Banner = () => {
               width={1920}
               height={500}
               className='banner-image'
-              priority={false}
+              priority={true}
             />
           ) : (
             <video
