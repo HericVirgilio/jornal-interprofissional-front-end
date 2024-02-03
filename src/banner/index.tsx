@@ -23,11 +23,11 @@ const Banner = () => {
     setCurrentImageIndex(index);
   };
 
-  // Efeito de intervalo para alternar automaticamente as imagens a cada 5 segundos
+  // Efeito de intervalo para alternar automaticamente as imagens a cada 10 segundos
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
-    }, 5000);
+    }, 10000);
 
     // Limpa o intervalo quando o componente é desmontado ou atualizado
     return () => clearInterval(interval);
