@@ -1,7 +1,7 @@
 export default function Page() {
     return (
       <main>
-        <h2>VC ESTA em ADM</h2>
+        <h1>Página de login</h1>
       </main>
     )
   }
