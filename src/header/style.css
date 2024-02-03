@@ -1,23 +1,19 @@
-.header{
+.logo-site {
+    margin-right: 20px;
+    vertical-align: middle;
+}
+
+.titulo-site {
+    font-size: 32px;
+    color: black;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.cabecalho{
     background-color: #f7f9fd;
     display: flex;
     align-items: center;
     justify-content: space-around;
-    height: 10vh;
-}
-.lista_header{
-    display: flex;
-    list-style: none;
-    margin-right: 10%;
-}
-.li_header{
-    margin-right: 10%;
-    font-weight: 700;
-    color: #7e8687;
-    padding: 10px;
-}
-.li_header:hover{
-    color: #61ce70;
-    border-bottom: 3px solid;
-    transition: 0.1s;
+    height: 12vh;
 }
