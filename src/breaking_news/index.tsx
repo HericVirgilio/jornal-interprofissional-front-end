@@ -18,7 +18,7 @@ export default function Breaking_news() {
                 </div>
 
                 <div className='breakingnews-materia'>
-                    <Image className='imgmateria' src='/images/covers/teste-capa.jpg' alt='Imagem de capa da notícia' width={360} height={360} />
+                    <Image className='breakingnews-imgmateria' src='/images/covers/teste-capa.jpg' alt='Imagem de capa da notícia' width={360} height={360} />
                     <a className='breakingnews-titulomateria' href='https://www.instagram.com/plataformanerd.store/'>Primeira edição do Jornal Interprofissional</a>
                     <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
                     <a className='breakingnews-leiamais' href='https://www.instagram.com/plataformanerd.store/'>Leia mais »</a>

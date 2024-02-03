@@ -6,5 +6,7 @@
 }
 
 .edicoes img {
+    width: 14%;
+    height: auto;
     padding: 0 10px 10px 10px;
 }
