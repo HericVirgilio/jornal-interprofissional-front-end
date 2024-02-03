@@ -1,3 +1,13 @@
+.menu{
+    background-color: #f7f9fd;
+    display: flex;
+    bottom: 0;
+    left: 0;
+    align-items: center;
+    height: 10vh;
+    padding-left: 10%;
+}
+
 .menu_lista {
     display: flex;
     list-style: none;
