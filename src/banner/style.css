@@ -18,14 +18,7 @@
     justify-content: center; /* Centraliza horizontalmente no contêiner */
     align-items: center; /* Centraliza verticalmente no contêiner */
   }
-  
-  /* Estilo da imagem no slide */
-  .banner-image {
-    object-fit: cover; /* Ajusta a imagem para cobrir totalmente o contêiner */
-    width: 100%; /* Largura de 100% do contêiner pai */
-    height: 100%; /* Altura de 100% do contêiner pai */
-  }
-  
+   
   /* Estilo da navegação (retângulos) na parte inferior do banner */
   .banner-navigation {
     position: absolute; /* Posição absoluta para posicionar os retângulos abaixo do banner */
@@ -38,15 +31,42 @@
   
   /* Estilo dos retângulos na navegação */
   .banner-rectangle {
-    width: 8px; /* Largura fixa dos retângulos */
-    height: 4px; /* Altura fixa dos retângulos */
+    width: 35px; /* Largura fixa dos retângulos */
+    height: 5px; /* Altura fixa dos retângulos */
     margin: 0 5px; /* Margem entre os retângulos */
-    background-color: #8A2BE2; /* Cor do retângulo inativo (roxo) */
+    background-color: #61ce70; /* Cor do retângulo inativo (roxo) */
     cursor: pointer; /* Cursor de ponteiro para indicar que é clicável */
   }
   
   /* Estilo do retângulo ativo na navegação */
   .banner-rectangle.active {
-    background-color: #008000; /* Cor do retângulo ativo (verde) */
+    background-color:   #8A2BE2; /* Cor do retângulo ativo (verde) */
   }
-  
+
+   /* Estilo da imagem no slide */
+   .banner-image {
+    object-fit: cover; /* Ajusta a imagem para cobrir totalmente o contêiner */
+    width: 100%; /* Largura de 100% do contêiner pai */
+    height: 100%; /* Altura de 100% do contêiner pai */
+  }
+
+     /* Estilo do video no slide */
+  .banner-video {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
+
+/* Estilo do container principal do banner para telas maiores que 1920px */
+@media screen and (min-width: 1800px) {
+  .banner-container {
+    height: 500px;
+  }
+}
+
+/* Estilo do container principal do banner para telas maiores que 768px e menores que 1920px */
+@media screen and (min-width: 500px) and (max-width: 1799px) {
+  .banner-container {
+    height: 350px;
+  }
+}
