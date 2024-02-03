@@ -7,10 +7,9 @@
 .creditos_rodape{
     background-color: #f7f9fd;
     display: flex;
-    position: relative;
     left: 0;
     flex-direction: column;
-    height: 20vh;
+    height: 200px;
     padding: 2% 0% 0% 12%;
     justify-content: center;
 }
@@ -29,15 +28,4 @@ li {
 
 li a{
     padding-right: 10px;
-}
-
-.menu{
-    background-color: #f7f9fd;
-    display: flex;
-    position: relative;
-    bottom: 0;
-    left: 0;
-    align-items: center;
-    height: 10vh;
-    padding-left: 10%;
 }

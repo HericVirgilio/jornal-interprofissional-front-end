@@ -1,16 +1,28 @@
-.menu_lista{
+.menu{
+    background-color: #f7f9fd;
+    display: flex;
+    bottom: 0;
+    left: 0;
+    align-items: center;
+    height: 10vh;
+    padding-left: 10%;
+}
+
+.menu_lista {
     display: flex;
     list-style: none;
 }
 
-.link_menu{
+.link_menu {
     font-weight: 600;
     color: #7e8687;
     padding: 13px 25px 5px 25px;
     text-decoration: none;
 }
 
-.link_menu:hover{
+/* Aplicar estilo tanto no hover quanto quando a classe 'active' está presente */
+.link_menu:hover,
+.link_menu.active {
     color: #61ce70;
     border-bottom: 3px solid;
     transition: 0.1s;

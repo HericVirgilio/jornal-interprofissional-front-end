@@ -8,6 +8,11 @@
     padding-bottom: 3%;
 }
 
+.img-dev {
+    width: 50%;
+    height: auto;
+}
+
 .card-sobre {
     width: 40%;
     display: flex;
@@ -21,8 +26,19 @@
     height: 150px;
 }
 
-.link-instagram {
+.link-instagram,
+.link-github {
     line-height: 2.5;
+}
+
+.link-github::before {
+    content: url('/images/icons/github.png');
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    margin-left: -3px;
+    margin-right: 9px;
+    vertical-align: middle;
 }
 
 .link-instagram::before {
@@ -32,4 +48,10 @@
     height: 30px;
     margin-right: 5px;
     vertical-align: middle;
+}
+
+.cor_destaque_link_github {
+    list-style: none;
+    text-decoration: none;
+    color: rgb(0, 0, 0);
 }

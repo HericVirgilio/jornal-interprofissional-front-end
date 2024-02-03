@@ -1,4 +1,5 @@
 import Header from "@/src/header"
+import Editions from "@/src/editions"
 import Footer from "@/src/footer"
 import Menu from "@/src/menu"
 
@@ -7,9 +8,7 @@ export default function Page() {
   return (
     <main>
       <Header/>
-        <div>
-          <h1>Edições</h1>
-        </div>
+      <Editions/>
       <Footer/>
       <Menu/>
     </main>

@@ -1,0 +1,10 @@
+.edicoes{
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    flex-direction: column;
+}
+
+.edicoes img {
+    padding: 0 10px 10px 10px;
+}
