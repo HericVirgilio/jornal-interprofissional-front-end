@@ -10,7 +10,7 @@
     left: 0;
     flex-direction: column;
     height: 200px;
-    padding: 2% 0% 0% 12%;
+    padding: 2% 12% 0% 12%;
     justify-content: center;
 }
 
@@ -20,12 +20,19 @@
     margin: 5px 0 5px 0;
 }
 
-li {
+.lista-rodape {
     line-height: 2;
     color: #7A7A7A;
     list-style: none;
 }
 
-li a{
+.lista-rodape a{
     padding-right: 10px;
+}
+
+.coluna-rodape {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
 }

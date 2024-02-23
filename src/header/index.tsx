@@ -40,7 +40,9 @@ export default function Header() {
         />
         Jornal Interprofissional
       </Link>
+      <nav>
       <Menu />
+      </nav>
     </div>
   )
 }

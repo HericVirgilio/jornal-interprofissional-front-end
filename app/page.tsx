@@ -6,12 +6,14 @@ import Breaking_news from "@/src/breaking_news"
 
 export default function Home() {
   return (
-    <main>
+    <div>
       <Header/>
       <Banner/>
+      <main>
       <Breaking_news/>
+      </main>
       <Footer/>
       <Menu/>
-    </main>
+    </div>
   )
 }

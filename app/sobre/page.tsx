@@ -5,11 +5,13 @@ import Menu from "@/src/menu";
 
 export default function Page() {
   return (
-    <main>
+    <div>
       <Header />
+      <main>
       <Sobre />
+      </main>
       <Footer />
       <Menu />
-    </main>
+    </div>
   )
 }
