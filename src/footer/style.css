@@ -10,7 +10,7 @@
     left: 0;
     flex-direction: column;
     height: 200px;
-    padding: 2% 0% 0% 12%;
+    padding: 2% 12% 0% 12%;
     justify-content: center;
 }
 
@@ -30,11 +30,9 @@
     padding-right: 10px;
 }
 
-.link-privacidade {
-    margin: 10px 0;
-}
-
-.link-privacidade a {
-    text-decoration: none;
-    color: #c36;
+.coluna-rodape {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
 }
