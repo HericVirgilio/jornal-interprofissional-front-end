@@ -7,11 +7,13 @@ import Menu from "@/src/menu"
 
 export default function Page() {
   return (
-    <main>
-      <Header/>
-      <News/>
-      <Footer/>
-      <Menu/>
-    </main>
+    <div>
+      <Header />
+      <main>
+      <News />
+      </main>
+      <Footer />
+      <Menu />
+    </div>
   )
 }
