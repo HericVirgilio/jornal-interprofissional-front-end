@@ -1,3 +1,7 @@
+.edicoes-container {
+    margin: 3% 0;
+}
+
 .edicoes{
     display: flex;
     align-items: center;

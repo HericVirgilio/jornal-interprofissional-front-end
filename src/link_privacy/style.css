@@ -1,0 +1,9 @@
+.link-privacidade a {
+    text-decoration: none;
+    font-weight: 600;
+    color: #7e8687;
+}
+
+.link-privacidade a:hover{
+    color: #c36;
+}

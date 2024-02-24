@@ -1,4 +1,8 @@
-.noticias-container{
+.noticias-container {
+    margin: 3% 0;
+}
+
+.noticias{
     display: flex;
     margin: 0 5%;
     flex-direction: row;
