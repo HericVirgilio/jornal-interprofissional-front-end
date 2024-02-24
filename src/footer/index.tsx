@@ -1,4 +1,4 @@
-import Link_privacidade from '../link_privacidade'
+import Link_privacy from '../link_privacy'
 import './style.css'
 
 export default function Footer() {
@@ -14,7 +14,7 @@ export default function Footer() {
                         <li className="lista-rodape"><a href="https://www.instagram.com/claudio.pales" className='link' target='_blank'><span className='cor_destaque_link'>@claudio.pales</span></a>Claudio Pales</li>
                         <li className="lista-rodape"><a href="https://www.instagram.com/jpales_" className='link' target='_blank'><span className='cor_destaque_link'>@jpales_</span></a>João Pedro Pales</li>
                     </ul>
-                    <Link_privacidade />
+                    <Link_privacy />
                 </div>
             </div>
         </div>

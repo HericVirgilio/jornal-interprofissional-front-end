@@ -1,6 +1,5 @@
 import Header from "@/src/header";
-import Footer from "@/src/footer";
-import Sobre from "@/src/sobre";
+import About from "@/src/about";
 import Menu from "@/src/menu";
 
 export default function Page() {
@@ -8,9 +7,8 @@ export default function Page() {
     <div>
       <Header />
       <main>
-      <Sobre />
+      <About />
       </main>
-      <Footer />
       <Menu />
     </div>
   )

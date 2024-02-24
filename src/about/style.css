@@ -1,3 +1,7 @@
+.sobre-container {
+    margin: 3%;
+}
+
 .sobre {
     display: flex;
     flex-direction: row;
@@ -58,4 +62,11 @@
 
 .lista {
     list-style: none;
+}
+
+.link-privacidade-sobre{
+    display: flex;
+    justify-content: center;
+    margin: 3% 0;
+
 }

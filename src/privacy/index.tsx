@@ -1,6 +1,6 @@
 import './style.css'
 
-export default function Privacidade() {
+export default function Privacy() {
     return (
         <div className='privacidade-container'>
 
