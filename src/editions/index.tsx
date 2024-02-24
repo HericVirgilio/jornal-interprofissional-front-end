@@ -3,7 +3,7 @@ import './style.css'
 export default function Editions() {
     return (
 
-        <div>
+        <div className='edicoes-container'>
             <h1 className='titulo-pagina'>Edições</h1>
 
             <div className='edicoes'>

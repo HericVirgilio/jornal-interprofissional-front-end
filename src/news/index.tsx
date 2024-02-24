@@ -4,11 +4,11 @@ import './style.css'
 export default function News() {
     return (
 
-        <div>
+        <div className='noticias-container'>
 
             <h1 className="titulo-pagina">Notícias</h1>
 
-            <div className="noticias-container">
+            <div className="noticias">
 
                 <div className="materia">
                     <Image className='imgmateria' src="/images/covers/teste-capa.jpg" alt="Imagem de capa da notícia" width={360} height={360} priority={true}/>
