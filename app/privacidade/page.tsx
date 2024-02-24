@@ -1,5 +1,5 @@
 import Header from "@/src/header"
-import Privacidade from "@/src/privacidade"
+import Privacy from "@/src/privacy"
 import Footer from "@/src/footer"
 import Menu from "@/src/menu"
 
@@ -8,7 +8,7 @@ export default function Page() {
         <div>
             <Header />
             <main>
-            <Privacidade />
+            <Privacy />
             </main>
             <Footer />
             <Menu />
