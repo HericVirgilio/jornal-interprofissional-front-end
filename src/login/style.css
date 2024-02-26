@@ -1,0 +1,72 @@
+.BoxLogin{
+    margin: auto;
+    width: 70vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 30vw;
+}
+.BoxLeftCadastro{
+    background-color: #58AF9C;
+    width: 500px;
+    height: 500px;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px 0px 0px 20px;
+}
+.BoxCadastroLogin{
+    text-align: center;
+    color: white;
+}
+.BoxCadastroLogin > p{
+    color: white;
+    font-weight: 300;
+    margin-top: 20px;
+}
+.LinkParaCadastro{
+    border: 2px solid white;
+    width: 200px;
+    height: 40px;
+    margin: auto;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    color: white;
+    text-decoration: none;
+}
+.BoxRightLogin{
+    width: 500px;
+    height: 500px;
+    background-color: #F7F9FD;
+    border-radius: 0px 20px 20px 0px;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+.FormularioLogin{
+    display: grid;
+    grid-template-columns: 1fr;
+}
+.BoxRightLogin > div >  h1{
+    color: #58AF9C;
+}
+.InputTextLogin{
+    margin-top: 10px;
+    border: none;
+    background-color: #ECF0F1;
+    height: 30px;
+    padding: 5px;
+}
+.BotaoEntrarLogin{
+    margin: auto;
+    margin-top: 10px;
+    border-radius: 20px;
+    height: 30px;
+    border: none;
+    width: 150px;
+    color: white;
+    background-color: #58AF9C;
+} 

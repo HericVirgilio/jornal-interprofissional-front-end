@@ -1,7 +1,10 @@
-export default function Page() {
-  return (
-    <div>
-      <h1>Página de login</h1>
-    </div>
-  )
+import Header from "@/src/header"
+import Login from "@/src/login"
+export default function Adm(){
+    return(
+        <div>
+            <Header/>
+            <Login/>
+        </div>
+    )
 }

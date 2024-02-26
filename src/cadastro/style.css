@@ -1,0 +1,59 @@
+.BoxCadastro{
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 100px;
+}
+.BoxCadastroLeft{
+    background-color: #F7F9FD;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    width: 500px;
+    height: 500px;
+    border-radius: 20px 0px 0px 20px;
+}
+.TituloCadastro{
+    color: #58AF9C;
+}
+.BoxFormularioCadastro{
+    display: grid;
+    grid-template-columns: 1fr ;
+}
+.InputCadastro{
+    margin-top: 10px;
+    border: none;
+    background-color: #ECF0F1;
+    height: 30px;
+    padding: 5px;
+}
+.BotaoRegistraUsuario{
+    margin: auto;
+    margin-top: 10px;
+    border-radius: 20px;
+    height: 30px;
+    border: none;
+    width: 150px;
+    color: white;
+    background-color: #58AF9C;
+}
+.BoxCadastroRight{
+    background-color: #58AF9C;
+    width: 500px;
+    height: 500px;
+    border-radius: 0px 20px 20px 0px;
+    text-align: center;
+    align-items: center;
+    display: flex;
+}
+.CaixaBoxCadastroRight{
+    max-width: 70%;
+    margin: auto;
+}
+.tituloRightCadastro{
+    color: white;
+}
+.textoCadastro{
+    color: white;
+}
