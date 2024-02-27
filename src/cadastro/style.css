@@ -1,9 +1,11 @@
 .BoxCadastro{
+    margin-top: 100px;
     margin: auto;
+    width: 70vw;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 100px;
+    height: 30vw;
 }
 .BoxCadastroLeft{
     background-color: #F7F9FD;

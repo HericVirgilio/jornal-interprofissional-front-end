@@ -8,7 +8,7 @@ export default function CadastroForm(){
                 <h1 className="TituloCadastro">Cadastre-se</h1>
                     <form className="BoxFormularioCadastro">
                         <input className="InputCadastro" type="text" name="nomeUsuario" id="nomeUsuario" placeholder="Nome de Usuario" />
-                        <input className="InputCadastro" type="password" name="senhaUsuario" id="senhaUsuario" placeholder="Senha" />
+                        <input className="InputCadastro" type="password" name="senhaUsuario" id="senhaUsuario" placeholder="Digire sua senha" />
                         <input className="InputCadastro" type="password" name="senhaUsuarioDois" id="senhaUsuarioDois" placeholder="Digite sua senha novamente" />
                         <input className="BotaoRegistraUsuario" type="button" value="Cadastrar" />
                     </form>
