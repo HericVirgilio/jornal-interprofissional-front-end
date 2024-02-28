@@ -45,7 +45,6 @@ export default function FileInputnNoticias() {
 
                 <textarea id="texto-noticia" rows={20} cols={100} placeholder="Digite seu texto" onChange={(e) => setSelectedTexto(e.target.value)} required />
 
-                <input className="BotaoEntrarLogin" type="submit" value="Postar Noticia" />
             </form>
         </div>
     );
