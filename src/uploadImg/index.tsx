@@ -38,7 +38,7 @@ export default function FileInputnNoticias() {
                 <textarea className="InputSubtitulo" placeholder="Pré-texto" onChange={(e) => setSubTitulo(e.target.value)} required />
 
 
-                <label className="PictureLabel" style={{ backgroundImage: selectedFile ? `url(${URL.createObjectURL(selectedFile)})` : 'none', backgroundSize: "contain"}}>
+                <label className="PictureLabel" style={{ backgroundImage: selectedFile ? `url(${URL.createObjectURL(selectedFile)})` : 'none', backgroundSize: "contain", backgroundRepeat: "no-repeat", backgroundPosition: "center"}}>
                     <input type="file" className="pictureInput" onChange={handleFileInputChange} required />
                     <span className="SpanText">Enviar Imagem</span>
                 </label>
@@ -47,17 +47,8 @@ export default function FileInputnNoticias() {
 
                 <input className="BotaoEntrarLogin" type="submit" value="Postar Noticia" />
             </form>
-
         </div>
     );
 }
 
-/*
-<div>
-    {Form && Form.get("selectedFile") !== null && (
-        <div>
-            <h1>titulo: {titulo}</h1>
-            <img src={URL.createObjectURL(Form.get("selectedFile") as Blob)} alt="Imagem selecionada" />
-        </div>
-    )}
-</div>*/
+
