@@ -1,0 +1,83 @@
+.BoxAdmNoticias {
+    text-align: center;
+}
+
+.BoxAdmNoticias>h5 {
+    margin: 30px;
+    font-size: 30px;
+    font-family: sans-serif;
+}
+.FormNoticias {
+    display: grid;
+    grid-template-columns: 1fr;
+    max-width: 40vw;
+    margin: auto;
+}
+.InputText{
+    margin-top: 10px;
+    border: none;
+    background-color: #ECF0F1;
+    height: 30px;
+    padding: 5px;
+}
+
+.InputSubtitulo{
+    margin-top: 10px;
+    border: none;
+    background-color: #ECF0F1;
+    height: 30px;
+    padding: 5px;
+}
+
+.PictureLabel {
+    margin: 20px auto 20px auto;
+    width: 30vw;
+    aspect-ratio: 16/9;
+    background-color: #ddd;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #aaa;
+    border: 2px dashed currentColor;
+    cursor: pointer;
+    font-family: sans-serif;
+    outline: 2px solid #fff;
+}
+
+.PictureLabel:hover {
+    color: #777;
+    background-color: #ccc;
+    transition: color 300ms ease-in-out, background-color 300ms ease-in-out;
+}
+
+.PictureLabel:active {
+    background-color: #eee;
+    color: #aaa;
+}
+
+.picture__input {
+    display: none;
+}
+
+.PictureLabel.focus {
+    outline: 2px solid black;
+}
+
+.pictureInput {
+    display: none;
+}
+.BotaoEntrarLogin{
+    margin: 20px auto 20px;
+    border-radius: 20px;
+    height: 50px;
+    border: none;
+    width: 300px;
+    color: white;
+    font-size: 20px;
+    background-color: #58AF9C;
+} 
+.SpanText{
+    background-color: #aaa;
+    color: white;
+    padding: 5px;
+}
