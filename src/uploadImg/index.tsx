@@ -44,7 +44,7 @@ export default function FileInputnNoticias() {
                 </label>
 
                 <textarea id="texto-noticia" rows={20} cols={100} placeholder="Digite seu texto" onChange={(e) => setSelectedTexto(e.target.value)} required />
-
+                <input type="submit" className="BotaoSubmit"/>
             </form>
         </div>
     );

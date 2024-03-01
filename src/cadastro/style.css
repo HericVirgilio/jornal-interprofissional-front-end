@@ -7,6 +7,16 @@
     justify-content: center;
     height: 30vw;
 }
+.pop-up{
+    position: absolute;
+    background-color: rgb(190, 190, 190);
+    width: 500px;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
 .BoxCadastroLeft{
     background-color: #F7F9FD;
     display: grid;

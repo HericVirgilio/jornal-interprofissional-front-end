@@ -1,3 +1,4 @@
+"use client"
 import Header from "@/src/header";
 import CadastroForm from "@/src/cadastro";
 
