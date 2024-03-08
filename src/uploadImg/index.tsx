@@ -1,6 +1,6 @@
 import React, { useState, ChangeEvent, FormEvent } from "react";
 import "./style.css";
-import axios from 'axios';
+import axios from 'axios'; //npm install axios
 
 export default function FileInputNoticias() {
 

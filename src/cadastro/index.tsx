@@ -1,5 +1,5 @@
 import "./style.css"
-import axios from "axios"
+import axios from "axios" //npm install axios
 import { useState } from "react"
 import Link from "next/link";
 
