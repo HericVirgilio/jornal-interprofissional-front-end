@@ -1,13 +1,17 @@
 .noticias-container {
     margin: 3% 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .noticias{
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
     margin: 0 5%;
     flex-direction: row;
     align-items: center;
-    justify-content: space-around;
+    justify-content: center;
     margin-bottom: 50px;
 }
 .materia{

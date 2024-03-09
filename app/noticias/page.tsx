@@ -1,3 +1,4 @@
+"use client"
 import Header from "@/src/header"
 import News from "@/src/news"
 import Footer from "@/src/footer"
