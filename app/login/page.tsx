@@ -1,3 +1,4 @@
+"use client"
 import Header from "@/src/header"
 import Login from "@/src/login"
 export default function Adm(){

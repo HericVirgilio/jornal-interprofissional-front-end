@@ -1,25 +1,47 @@
 import Image from 'next/image'
 import './style.css'
+import axios from 'axios';
+import { useEffect, useState } from 'react';
+
+type Edicoes = {
+    id: number;
+    titulo: string;
+    imagemAddress: string;
+    pdfAdress: string;
+  };
+
 export default function Editions() {
+    const [edicoes, setEdicoes] = useState<Edicoes[]>([]);
+    useEffect(() => {
+        const carregarNoticias = async () => {
+          try {
+            const response = await axios.get<Edicoes[]>('http://localhost:8080/edicoes');
+            setEdicoes(response.data);
+          } catch (error) {
+            console.error('Erro ao carregar notícias:', error);
+          }
+        };
+    
+        carregarNoticias();
+      }, []);
     return (
 
         <div className='edicoes-container'>
-            <h1 className='titulo-pagina'>Edições</h1>
-
-            <div className='edicoes'>
-                <Image
-                    src='/images/covers/JORNAL-01-Novembro-2023.png'
-                    alt='Capa da revista'
-                    width={171}
-                    height={158}
-                    priority={true}
-                />
-
-                <h2>Primeira edição do Jornal Interprofissional</h2>
-
-                <a className='cor_destaque_link' href='/docs/editions/JORNAL-01-VERSAO-FINA-ESTUDANTE-PARA-ESTUDANTE.pdf' target='_blank'>Download</a>
-
-            </div>
+            {edicoes.map((edicoes) => (
+                <div>
+                    <h1 className='titulo-pagina'>{edicoes.titulo}</h1>
+                    <div className='edicoes'>
+                        <Image
+                            src={edicoes.imagemAddress}
+                            alt='Capa da revista'
+                            width={171}
+                            height={158}
+                            priority={true}
+                        />
+                        <a className='cor_destaque_link' href={`http://localhost:8080/${edicoes.pdfAdress}`} target='_blank'>Download</a>
+                    </div>
+                </div>
+            ))}
         </div>
     )
 }

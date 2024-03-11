@@ -2,7 +2,7 @@ import React, { useState, ChangeEvent, FormEvent } from "react";
 import "./style.css";
 import axios from 'axios';
 
-export default function FileInputNoticias() {
+export default function Noticias() {
 
     const [titulo, setTitulo] = useState<string>("");
     const [subTitulo, setSubTitulo] = useState<string>("");
