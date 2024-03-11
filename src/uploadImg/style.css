@@ -10,7 +10,7 @@
 .FormNoticias {
     display: grid;
     grid-template-columns: 1fr;
-    max-width: 40vw;
+    min-width: 40vw;
     margin: auto;
 }
 .InputText{
