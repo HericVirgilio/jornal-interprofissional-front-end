@@ -16,9 +16,7 @@ export default function Login() {
             const response = await axios.post('http://localhost:8080/auth/login', { nome: username, senha: password });
             const token = response.data.access_token;
             console.log(token)
-            // Armazenar o token JWT no armazenamento local
             localStorage.setItem('token', token);
-            // Redirecionar para a página protegida após o login bem-sucedido
             router.push('/adm');
         } catch (error) {
             setError('Usuário ou senha inválidos');

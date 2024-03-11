@@ -1,13 +1,31 @@
-import React, { useState, ChangeEvent, FormEvent } from "react";
+import React, { useState, ChangeEvent, FormEvent, useEffect } from "react";
 import "./style.css";
 import axios from 'axios';
+import { useRouter } from 'next/navigation';
 
 export default function Noticias() {
+
+   
+    const router = useRouter()
 
     const [titulo, setTitulo] = useState<string>("");
     const [subTitulo, setSubTitulo] = useState<string>("");
     const [selectedFile, setSelectedFile] = useState<File | null>(null);
     const [selectedTexto, setSelectedTexto] = useState<string>("");
+    const [redirecting, setRedirecting] = useState(true);
+    
+    useEffect(() =>  {
+        const token = localStorage.getItem('token');
+        if (!token) {
+            router.push('http://localhost:3000/login'); 
+        } else {
+            setRedirecting(false); // Indica que o redirecionamento foi concluído
+        }
+    }, []);
+    if (redirecting) {
+        return null;
+    }
+
 
     const handleFileInputChange = (event: ChangeEvent<HTMLInputElement>) => {
         const file = event.target.files && event.target.files[0];
@@ -32,9 +50,12 @@ export default function Noticias() {
         }
 
         try {
+
+            const token = localStorage.getItem('token');
             const response = await axios.post('http://localhost:8080/noticias/cria-noticia', requestData, {
         headers: {
-            'Content-Type': 'multipart/form-data', // Certifique-se de definir o Content-Type como multipart/form-data
+            'Content-Type': 'multipart/form-data', 
+            "Authorization": `Bearer ${token}`
         }
     });
             console.log('Response:', response.data);
@@ -42,7 +63,7 @@ export default function Noticias() {
             console.error('Erro ao cadastrar usuário:', error.response);
         }
     }
-
+    
     return (
         <div className="BoxAdmNoticias">
             <h5>Publicar Notícia</h5>
@@ -65,3 +86,7 @@ export default function Noticias() {
         </div>
     );
 }
+function setRedirecting(arg0: boolean) {
+    throw new Error("Function not implemented.");
+}
+
