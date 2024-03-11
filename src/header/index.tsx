@@ -4,6 +4,7 @@ import { useEffect } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import Menu from '../menu';
+import MenuHamburger from '../menuHamburger';
 import './style.css';
 
 export default function Header() {
@@ -29,7 +30,7 @@ export default function Header() {
 
   return (
     <div className={`cabecalho-container cabecalho-expandido`} id='cabecalho'>
-      <Link href='/' className='titulo-site'>
+      <Link href='/' className='logo-site'>
         <Image
           src='/images/icons/logo.png'
           width={50}
@@ -38,11 +39,12 @@ export default function Header() {
           className='logo-site'
           priority={true}
         />
-        Jornal Interprofissional
+        <h1 className='titulo-site'>Jornal Interprofissional</h1>
       </Link>
       <nav>
       <Menu />
       </nav>
+      <MenuHamburger />
     </div>
   )
 }
