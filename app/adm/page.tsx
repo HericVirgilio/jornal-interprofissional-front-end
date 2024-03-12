@@ -4,6 +4,8 @@ import Header from "@/src/header"
 import Edicoes from "@/src/uploadPdf"
 import Noticias from "@/src/uploadImg"
 import { useState } from "react"
+import DeleteEdicoes from "@/src/deleteEdicoes"
+import DeleteNoticias from "@/src/deleteNoticias"
 
 export default function Adm(){
 
@@ -43,6 +45,16 @@ export default function Adm(){
             </div>
             <div style={{display: styleEdicoes}}>
                 <Edicoes />
+            </div>
+            <div>
+                <h2>Apagar Noticias</h2>
+            </div>
+            <div>
+                <DeleteNoticias/>
+            </div>
+            <div style={{display: styleEdicoes}}>
+                <h2>Apagar Edições</h2>
+                <DeleteEdicoes/>
             </div>
         </div>
     )

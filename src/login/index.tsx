@@ -15,7 +15,6 @@ export default function Login() {
         try {
             const response = await axios.post('http://localhost:8080/auth/login', { nome: username, senha: password });
             const token = response.data.access_token;
-            console.log(token)
             localStorage.setItem('token', token);
             router.push('/adm');
         } catch (error) {

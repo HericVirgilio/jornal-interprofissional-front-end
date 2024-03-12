@@ -36,11 +36,11 @@ export default function Edicoes() {
                         setRedirecting(false);
                     }
                 } else {
-                    // Token inválido, redirecionar para a página de login
+                    
                     router.push('http://localhost:3000/login');
                 }
             } else {
-                // Token inválido, redirecionar para a página de login
+                
                 router.push('http://localhost:3000/login');
             }
         }
