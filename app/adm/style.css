@@ -1,0 +1,15 @@
+.BoxCapsula{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: space-around;
+    align-items: center;
+    margin: auto;
+    height: 50px;
+    border: 1px  solid black;
+    width: 500px;
+    margin-top: 50px;
+}
+.BoxCapsula > div{
+    display: flex;
+    justify-content: center;
+}

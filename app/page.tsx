@@ -1,3 +1,4 @@
+"use client"
 import Header from "@/src/header"
 import Banner from "@/src/banner"
 import Footer from "@/src/footer"
