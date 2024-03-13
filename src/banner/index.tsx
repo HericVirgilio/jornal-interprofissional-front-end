@@ -1,10 +1,7 @@
 "use client"
 
-// Importa os módulos necessários do React e Next.js
 import React, { useState, useEffect } from 'react'
 import Image from 'next/image'
-
-// Importa os estilos CSS
 import './style.css'
 
 // Componente funcional Banner
@@ -89,3 +86,80 @@ const Banner = () => {
 
 // Exporta o componente Banner
 export default Banner;
+
+
+/*
+"use client"
+
+import React, { useState, useEffect } from 'react';
+import Image from 'next/image';
+import axios from 'axios';
+import './style.css';
+
+const Banners = () => {
+  // Criando uma variável de estado para armazenar os dados dos banners
+  const [dadosBanners, setDadosBanners] = useState([]);
+
+  // Utilizando o hook useEffect para buscar dados no banco de dados
+  useEffect(() => {
+    const buscarDadosBanners = async () => {
+      try {
+        const resposta = await axios.get('http://localhost:8080/banners'); // Substitua pelo endpoint real dos banners
+        setDadosBanners(resposta.data);
+      } catch (erro) {
+        console.error('Erro ao buscar dados dos banners:', erro);
+      }
+    };
+
+    buscarDadosBanners();
+  }, []);
+
+  return (
+    <div className="banner-container">
+      {dadosBanners.map((item, index) => (
+        <div
+          key={item.id}
+          className={`banner-slide ${index === currentMediaIndex ? 'visible' : ''}`}
+          style={{
+            opacity: index === currentMediaIndex ? 1 : 0,
+            transition: 'opacity 1s ease-in-out',
+          }}
+        >
+          {item.type === 'image' ? (
+            <Image
+              src={item.source}
+              alt={item.alt}
+              width={1920}
+              height={500}
+              className='banner-image'
+              priority={true}
+            />
+          ) : (
+            <video
+              autoPlay
+              muted
+              loop
+              className='banner-video'
+            >
+              <source src={item.source} type="video/webm" />
+              Seu navegador não suporta essa funcionalidade.
+            </video>
+          )}
+        </div>
+      ))}
+
+      <div className="banner-navigation">
+        {dadosBanners.map((_, index) => (
+          <div
+            key={index}
+            className={`banner-rectangle ${index === currentMediaIndex ? 'active' : ''}`}
+            onClick={() => handleRectangleClick(index)}
+          />
+        ))}
+      </div>
+    </div>
+  );
+};
+
+export default Banners;
+*/

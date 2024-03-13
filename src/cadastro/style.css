@@ -60,7 +60,7 @@
     display: flex;
 }
 .CaixaBoxCadastroRight{
-    max-width: 70%;
+    min-width: 70%;
     margin: auto;
 }
 .tituloRightCadastro{

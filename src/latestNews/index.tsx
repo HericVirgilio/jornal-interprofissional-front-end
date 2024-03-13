@@ -11,10 +11,9 @@ type Noticia = {
   subtitulo: string;
   texto: string;
   imagemAddress: string;
-  data: string;
 };
 
-export default function News() {
+export default function LatestNews() {
   const [noticias, setNoticias] = useState<Noticia[]>([]);
 
   useEffect(() => {
@@ -47,22 +46,22 @@ export default function News() {
     return `${dia}/${mes}/${ano}`;
   };
 
+
+  const ultimasNoticias = noticias.slice(0, 3); // Limita a exibição para as últimas 3 notícias
+
   return (
+    <div>
+      <h1 className="titulo-pagina">Últimas notícias</h1>
 
-    <div >
-
-      <h1 className="titulo-pagina">Notícias</h1>
-
-      <div className='noticias-container'>
-
-        <div className="noticias">
-          {noticias.map((noticia) => (
-            <a key={noticia.id} className="materia" href="https://www.instagram.com/plataformanerd.store/">
-              <Image className='imgmateria' src={noticia.imagemAddress} alt="Imagem de capa da notícia" width={360} height={360} priority={true} />
-              <p className='titulomateria'>{noticia.titulo}</p>
-              <p className='subtitulomateria'>{noticia.subtitulo}</p>
-              <span className='dataPublicacao-preview-noticias'>Publicado em: {formatarData(noticia.data)}</span>
-              <span className='leiamais'>Leia Mais »</span>
+      <div className='latest-news-container'>
+        <div className="latest-news">
+          {ultimasNoticias.map((noticia) => (
+            <a key={noticia.id} className="latest-news-materia" href="https://www.instagram.com/plataformanerd.store/">
+              <Image className='latest-news-imgmateria' src={noticia.imagemAddress} alt="Imagem de capa da notícia" width={360} height={360} priority={true} />
+              <p className='latest-news-titulomateria'>{noticia.titulo}</p>
+              <p className='latest-news-subtitulomateria'>{noticia.subtitulo}</p>
+              <span className='dataPublicacao-preview'>Publicado em: {formatarData(noticia.data)}</span>
+              <span className='latest-news-leiamais'>Leia Mais »</span>
             </a>
           ))}
         </div>

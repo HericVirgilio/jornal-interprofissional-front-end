@@ -1,11 +1,11 @@
-.menu{
+.menu {
     background-color: #f7f9fd;
     display: flex;
     bottom: 0;
     left: 0;
     align-items: center;
     height: 10vh;
-    padding-left: 10%;
+    padding-left: 12vh;
 }
 
 .menu_lista {
@@ -14,9 +14,10 @@
 }
 
 .link_menu {
+    font-size: 2.5vh;
     font-weight: 600;
     color: #7e8687;
-    padding: 13px 25px 5px 25px;
+    padding: 0vh 4vh 1vh 4vh;
     text-decoration: none;
 }
 
@@ -24,6 +25,14 @@
 .link_menu:hover,
 .link_menu.active {
     color: #61ce70;
-    border-bottom: 3px solid;
+    border-bottom: 0.5vh solid;
     transition: 0.1s;
+}
+
+@media (max-width: 767px) {
+
+    .menu {
+        display: none;
+    }
+
 }
