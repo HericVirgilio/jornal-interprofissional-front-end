@@ -1,9 +1,15 @@
 import "./style.css"
-import axios from "axios" //npm install axios
-import { useState } from "react"
+import axios from "axios"
+import { useEffect, useState } from "react"
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 
 export default function CadastroForm() {
+
+    const router = useRouter()
+
+    const [redirecting,setRedirecting] = useState(true)
+
     const [formData, setFormData] = useState({
         nomeUsuario: "",
         senhaUsuario: "",
@@ -24,12 +30,18 @@ export default function CadastroForm() {
             return;
         }
 
+        const token = localStorage.getItem('token')
+        
         try {
             const response = await axios.post('http://localhost:8080/users', {
                 nome: String(formData.nomeUsuario),
                 senha: String(formData.senhaUsuario)
-            });
-            console.log('Response:', response.data);
+            },{
+                headers:{
+                    "Authorization": `Bearer ${token}`
+                }
+            } );
+            router.push('http://localhost:3000/login');
             openOpUp()
         } catch (error:any) {
             console.error('Erro ao cadastrar usuário:', error.response);
@@ -39,6 +51,33 @@ export default function CadastroForm() {
     const openOpUp = () => {
         setpoup({display: "block"})
     }
+
+    useEffect(() =>  {
+        const token = localStorage.getItem('token');
+        if (!token) {
+            router.push('http://localhost:3000/login'); 
+        } else {
+            const tokenParts = token.split('.');
+            if (tokenParts.length === 3) {
+                const payload = JSON.parse(atob(tokenParts[1]));
+                if (payload && typeof payload.exp === 'number') {
+                    const expirationTime = payload.exp;
+                    const currentTime = Math.floor(Date.now() / 1000);
+                    if (expirationTime < currentTime) {
+                        router.push('http://localhost:3000/login'); 
+                    } else {
+                        setRedirecting(false);
+                    }
+                } else {
+                    
+                    router.push('http://localhost:3000/login');
+                }
+            } else {
+               
+                router.push('http://localhost:3000/login');
+            }
+        }
+    }, []);
 
 
     return (
