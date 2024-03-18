@@ -5,11 +5,28 @@
     align-items: center;
     margin: auto;
     height: 50px;
-    border: 1px  solid black;
     width: 500px;
     margin-top: 50px;
+    width: 90vw;
+    padding: 5px;
 }
 .BoxCapsula > div{
     display: flex;
     justify-content: center;
+    cursor: pointer;
+}
+.ClasseAtivo {
+    border-bottom: 3px solid #23B7E6;
+    transition: border-bottom 0.3s ease;
+}
+
+.ClasseDesativado {
+    border-bottom: none; 
+    transition: border-bottom 1s ease; 
+}
+
+@media (mIN-width: 600px) {
+    .BoxCapsula{
+        width: 30%;
+    }
 }

@@ -1,72 +1,48 @@
-.BoxLogin{
+.BoxLogin {
+    
+}
+
+.Box {
+    background-color: white;
+    width: 90vw;
     margin: auto;
-    width: 70vw;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 30vw;
-}
-.BoxLeftCadastro{
-    background-color: #58AF9C;
-    width: 500px;
-    height: 500px;
-    display: grid;
-    align-items: center;
-    justify-content: center;
-    border-radius: 20px 0px 0px 20px;
-}
-.BoxCadastroLogin{
     text-align: center;
-    color: white;
+    border-radius: 5px;
 }
-.BoxCadastroLogin > p{
-    color: white;
-    font-weight: 300;
-    margin-top: 20px;
+
+.Box>h1 {
+    margin: 20px 0px 20px 0px;
 }
-.LinkParaCadastro{
-    border: 2px solid white;
-    width: 200px;
-    height: 40px;
-    margin: auto;
+
+.BotaoEntrarLogin {
+    width: 80vw;
+    border: none;
+    cursor: pointer;
+    height: 35px;
+    margin: 20px;
+    font-weight: 600;
+    color: white;
+    background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 35%, rgba(0, 212, 255, 1) 100%);
     border-radius: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 20px;
-    color: white;
-    text-decoration: none;
 }
-.BoxRightLogin{
-    width: 500px;
-    height: 500px;
-    background-color: #F7F9FD;
-    border-radius: 0px 20px 20px 0px;
-    display: grid;
-    justify-content: center;
-    align-items: center;
+
+@media (min-width: 600px) {
+    .Box {
+        width: 55vw;
+        margin-top: 20vh;
+    }
 }
-.FormularioLogin{
-    display: grid;
-    grid-template-columns: 1fr;
+
+@media (min-width: 1000px) {
+    .Box {
+        width: 40vw;
+        margin-top: 20vh;
+    }
 }
-.BoxRightLogin > div >  h1{
-    color: #58AF9C;
+
+@media (min-width: 1500px) {
+    .Box {
+        margin-top: 20vh;
+        width: 20vw;
+    }
 }
-.InputTextLogin{
-    margin-top: 10px;
-    border: none;
-    background-color: #ECF0F1;
-    height: 30px;
-    padding: 5px;
-}
-.BotaoEntrarLogin{
-    margin: auto;
-    margin-top: 10px;
-    border-radius: 20px;
-    height: 30px;
-    border: none;
-    width: 150px;
-    color: white;
-    background-color: #58AF9C;
-} 

@@ -1,5 +1,10 @@
 .BoxAdmNoticias {
     text-align: center;
+    width: 100vw;
+}
+.InputsFormBox{
+    max-width: 90vw;
+    margin: auto;
 }
 
 .BoxAdmNoticias>h5 {
@@ -8,30 +13,33 @@
     font-family: sans-serif;
 }
 .FormNoticias {
-    display: grid;
-    grid-template-columns: 1fr;
-    min-width: 40vw;
+    display: block;
+}
+input{
+    display: block;
     margin: auto;
 }
-.InputText{
+.InputText {
     margin-top: 10px;
     border: none;
     background-color: #ECF0F1;
     height: 30px;
     padding: 5px;
+    width: 80%; 
 }
 
-.InputSubtitulo{
+.InputSubtitulo {
     margin-top: 10px;
     border: none;
     background-color: #ECF0F1;
     height: 30px;
     padding: 5px;
+    width: 80%; 
 }
 
 .PictureLabel {
     margin: 20px auto 20px auto;
-    width: 30vw;
+    width: 90%;
     aspect-ratio: 16/9;
     background-color: #ddd;
     display: flex;
@@ -79,7 +87,11 @@
 .SpanText{
     background-color: #aaa;
     color: white;
-    padding: 5px;
+    width: 50%;
+    height: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .BotaoSubmit{
     margin: 20px auto 20px;
@@ -90,4 +102,18 @@
     color: white;
     font-size: 20px;
     background-color: #58AF9C;
+    cursor: pointer;
+}
+.TextoBox{
+    max-width: 80%;
+    padding: 10px;
+}
+@media (min-width: 800px) {
+    .InputsFormBox{
+        max-width: 50vw;
+    }
+    .PictureLabel{
+        height: 40vh;
+        width: 40vw;
+    }
 }

@@ -7,54 +7,56 @@ import { useState } from "react"
 import DeleteEdicoes from "@/src/deleteEdicoes"
 import DeleteNoticias from "@/src/deleteNoticias"
 
-export default function Adm(){
+export default function Adm() {
 
-    const [styleNoticias,setStyleNoticias] = useState<string>("block")
-    const [styleEdicoes,setStyleEdicoes] = useState<string>("none")
+    const [styleNoticias, setStyleNoticias] = useState<string>("block")
+    const [styleEdicoes, setStyleEdicoes] = useState<string>("none")
     const [controle, setControle] = useState<boolean>(true)
 
-    const Navegação = () =>{
-        if(controle === true){
+    const Navegação = () => {
+        if (controle === true) {
             setStyleNoticias("none")
             setStyleEdicoes("block")
-        }else{
+        } else {
             setStyleNoticias("block")
             setStyleEdicoes("none")
         }
     }
 
-    const MudarContador = () =>{
-        if(controle === true){
+    const MudarContador = () => {
+        if (controle === true) {
             setControle(false)
             Navegação()
-        }else{
+        } else {
             setControle(true)
             Navegação()
         }
     }
 
-    return(
+    return (
         <div>
-            <Header/>
+            <Header />
             <div className="BoxCapsula">
-                <div className="NoticiasDiv" onClick={MudarContador}>Notícias</div>
-                <div className="EdicoesDiv" onClick={MudarContador}>Edições</div>
+                <div className={controle === true ? "ClasseAtivo" : "ClasseDesativado"} onClick={MudarContador}>Notícias</div>
+                <div className={controle === false ? "ClasseAtivo" : "ClasseDesativado"} onClick={MudarContador}>Edições</div>
             </div>
-            <div style={{display: styleNoticias}}>
+            <div style={{ display: styleNoticias }}>
                 <Noticias />
             </div>
-            <div style={{display: styleEdicoes}}>
+            <div style={{ display: styleEdicoes }}>
                 <Edicoes />
             </div>
-            <div>
-                <h2>Apagar Noticias</h2>
+            <div style={{ display: styleNoticias }}>
+                <div style={{ textAlign: "center", marginTop: "50px", marginBottom: "50px" }}>
+                    <h2>Apagar Noticias</h2>
+                </div>
+                <DeleteNoticias />
             </div>
-            <div>
-                <DeleteNoticias/>
-            </div>
-            <div style={{display: styleEdicoes}}>
-                <h2>Apagar Edições</h2>
-                <DeleteEdicoes/>
+            <div style={{ display: styleEdicoes }}>
+                <div style={{ textAlign: "center", marginTop: "50px", marginBottom: "50px" }}>
+                    <h2>Apagar Edições</h2>
+                </div>
+                <DeleteEdicoes />
             </div>
         </div>
     )

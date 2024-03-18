@@ -2,13 +2,23 @@ import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import axios from 'axios';
 import "./style.css"
-import Link from "next/link";
+import Visibility from '@mui/icons-material/Visibility';
+import VisibilityOff from '@mui/icons-material/VisibilityOff';
+import { FormControl, IconButton, InputAdornment, InputLabel, OutlinedInput } from '@mui/material';
+import Image from 'next/image';
 
 export default function Login() {
     const router = useRouter();
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
     const [error, setError] = useState('');
+    const [showPassword, setShowPassword] = useState(false);
+
+    const handleClickShowPassword = () => setShowPassword((show) => !show);
+
+    const handleMouseDownPassword = (event: React.MouseEvent<HTMLButtonElement>) => {
+        event.preventDefault();
+    };
 
     const handleSubmit = async (e: { preventDefault: () => void; }) => {
         e.preventDefault();
@@ -24,23 +34,38 @@ export default function Login() {
 
     return (
         <div className="BoxLogin">
-            <div className="BoxLeftCadastro">
-                <div className="BoxCadastroLogin">
-                    <h1>Bem-vindo</h1>
-                    <p>Atenção este portal é apenas para administradores!</p>
-                    <Link className="LinkParaCadastro" href={"/cadastro"}>Cadastre-se</Link>
-                </div>
-            </div>
-            <div className="BoxRightLogin">
-                <div>
-                    <h1>Faça seu Login</h1>
-                    <form className="FormularioLogin" onSubmit={handleSubmit}>
-                        <input className="InputTextLogin" type="text" name="nomeUsuario" id="nomeUsuario" placeholder="Nome" value={username} onChange={(e) => setUsername(e.target.value)} />
-                        <input className="InputTextLogin" type="password" name="senhaUsuario" id="senhaUsuario" placeholder="Senha" value={password} onChange={(e) => setPassword(e.target.value)} />
-                        <input className="BotaoEntrarLogin" type="submit" value="Entrar" />
-                    </form>
-                    {error && <p>{error}</p>}
-                </div>
+            <div className='Box'>
+                <h1>Faça seu Login</h1>
+                <Image src={"/images/icons/logo.png"} alt='' width={100} height={100}/>
+                <form className="FormularioLogin" onSubmit={handleSubmit}>
+                    <FormControl sx={{ m: 1, width: '90%' }} variant="outlined">
+                        <InputLabel htmlFor="outlined-adornment-password" size="small">Nome de usuário</InputLabel>
+                        <OutlinedInput value={username} onChange={(e) => setUsername(e.target.value)}
+                            type={'text'}
+                            label="Nome de usuário"
+                            size="small" />
+                    </FormControl>
+                    <FormControl sx={{ m: 1, width: '90%' }} variant="outlined">
+                        <InputLabel htmlFor="outlined-adornment-password" size="small">Digite sua senha</InputLabel>
+                        <OutlinedInput value={password} onChange={(e) => setPassword(e.target.value)}
+                            size="small"
+                            type={showPassword ? 'text' : 'password'}
+                            endAdornment={
+                                <InputAdornment position="end">
+                                    <IconButton
+                                        aria-label="toggle password visibility"
+                                        onClick={handleClickShowPassword}
+                                        onMouseDown={handleMouseDownPassword}
+                                        edge="end"
+                                    >
+                                        {showPassword ? <VisibilityOff /> : <Visibility />}
+                                    </IconButton>
+                                </InputAdornment>
+                            } label="Digite sua senha" />
+                    </FormControl>
+                    <input className="BotaoEntrarLogin" type="submit" value="Entrar" style={{ width: '90%' }} />
+                </form>
+                {error && <p>{error}</p>}
             </div>
         </div>
     );

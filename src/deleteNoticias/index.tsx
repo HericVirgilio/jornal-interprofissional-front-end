@@ -36,12 +36,14 @@ export default function DeleteNoticias(){
             }
       }
     return(
-        <div className="Capsula">
+        <div className="ContainerDelete">
             {edicoes.map((objeto) =>
-                <div>
-                    <h3>{objeto.titulo}</h3>
-                    <button onClick={() => capturaId(objeto.id)}>Deletar Edição</button>
-                </div>
+                
+                    <div className="BoxContainer">
+                      <h3>{objeto.titulo}</h3>
+                      <button className="botaoDeDeletar" onClick={() => capturaId(objeto.id)}>X</button>
+                    </div>
+                
             )}
         </div>
     )

@@ -1,71 +1,50 @@
-.BoxCadastro{
-    margin-top: 100px;
+.BoxLogin {
+    
+}
+
+.Box {
+    background-color: white;
+    width: 90vw;
     margin: auto;
-    width: 70vw;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 30vw;
-}
-.pop-up{
-    position: absolute;
-    background-color: rgb(190, 190, 190);
-    width: 500px;
-    height: 500px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: auto;
-}
-.BoxCadastroLeft{
-    background-color: #F7F9FD;
-    display: grid;
-    align-items: center;
-    justify-content: center;
-    width: 500px;
-    height: 500px;
-    border-radius: 20px 0px 0px 20px;
-}
-.TituloCadastro{
-    color: #58AF9C;
-}
-.BoxFormularioCadastro{
-    display: grid;
-    grid-template-columns: 1fr ;
-}
-.InputCadastro{
-    margin-top: 10px;
-    border: none;
-    background-color: #ECF0F1;
-    height: 30px;
-    padding: 5px;
-}
-.BotaoRegistraUsuario{
-    margin: auto;
-    margin-top: 10px;
-    border-radius: 20px;
-    height: 30px;
-    border: none;
-    width: 150px;
-    color: white;
-    background-color: #58AF9C;
-}
-.BoxCadastroRight{
-    background-color: #58AF9C;
-    width: 500px;
-    height: 500px;
-    border-radius: 0px 20px 20px 0px;
     text-align: center;
-    align-items: center;
-    display: flex;
+    border-radius: 5px;
 }
-.CaixaBoxCadastroRight{
-    min-width: 70%;
-    margin: auto;
+
+.Box>h1 {
+    margin: 20px 0px 20px 0px;
 }
-.tituloRightCadastro{
+.Box > Image {
+    margin: 20px 0px 20px 0px;
+}
+.BotaoEntrarLogin {
+    width: 80vw;
+    border: none;
+    cursor: pointer;
+    height: 35px;
+    margin: 20px;
+    font-weight: 600;
     color: white;
+    background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 35%, rgba(0, 212, 255, 1) 100%);
+    border-radius: 50px;
 }
-.textoCadastro{
-    color: white;
+
+@media (min-width: 600px) {
+    .Box {
+        width: 55vw;
+        margin-top: 20vh;
+    }
+}
+
+@media (min-width: 1000px) {
+    .Box {
+        width: 40vw;
+        margin-top: 20vh;
+    }
+}
+
+@media (min-width: 1500px) {
+    .Box {
+        margin-top: 20vh;
+        width: 20vw;
+    }
 }
