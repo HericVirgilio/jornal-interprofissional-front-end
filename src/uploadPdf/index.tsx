@@ -16,6 +16,8 @@ export default function Edicoes() {
     const [tituloDIV, setTituloDIV] = useState<string>("")
     const [imagemDIV, setImagemDIV] = useState<File | null>(null)
     const [pdfDIV, setPdfDIV] = useState<File | null>(null)
+    const [edicaoPostadaComSucesso, setEdicaoPostadaComSucesso] = useState<boolean>(false)
+    const [edicaoPostadaComErro, setEdicaoPostadaComErro] = useState<boolean>(false)
 
     const [redirecting,setRedirecting] = useState(true)
 
@@ -76,12 +78,32 @@ export default function Edicoes() {
                 }
             });
             console.log('Response:', response.data);
+            setEdicaoPostadaComSucesso(true)
         } catch (error: any) {
             console.error('Erro ao enviar formulário:', error.response);
+            setEdicaoPostadaComErro(true)
         }
     };
     return (
         <div className="BoxUploadPdf">
+            {
+                edicaoPostadaComSucesso && (
+                    <div className="DivPopUpVerde">
+                        <Image src={"/images/icons/ok.svg"} width={100} height={100} alt="OK"/>
+                        <p className="pErro">Edição postada com sucesso!</p>
+                        <div className="FundoBrancoPopUp"><button className="botaoFecharVerde" onClick={() => setEdicaoPostadaComSucesso(false)}> Fechar </button></div>
+                    </div>
+                )
+            }
+            {
+                edicaoPostadaComErro && (
+                    <div className="DivPopUp">
+                         <Image src={"/images/icons/pop-up-erro.svg"} width={100} height={100} alt="Erro"/>
+                        <p className="pErro">Não foi possível postar sua edição. Por favor, tente novamente.</p>
+                        <div className="FundoBrancoPopUp"><button className="botaoFecharVermelho" onClick={() => setEdicaoPostadaComErro(false)}> Fechar </button></div>
+                    </div>
+                )
+            }
             <h5>Publicar Edições</h5>
             <form className="Formulario" onSubmit={EnviarFormulario}>
 

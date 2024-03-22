@@ -2,11 +2,12 @@ import React, { useState, ChangeEvent, FormEvent, useEffect } from "react";
 import "./style.css";
 import axios from 'axios';
 import { useRouter } from 'next/navigation';
+import Image from "next/image";
 
 
 export default function Noticias() {
 
-   
+
     const router = useRouter()
 
     const [titulo, setTitulo] = useState<string>("");
@@ -14,11 +15,13 @@ export default function Noticias() {
     const [selectedFile, setSelectedFile] = useState<File | null>(null);
     const [selectedTexto, setSelectedTexto] = useState<string>("");
     const [redirecting, setRedirecting] = useState(true);
-    
-    useEffect(() =>  {
+    const [noticiaPostadaSucesso, setNoticiaPostadaSucesso] = useState<boolean>(false);
+    const [noticiaPostadaErro, setNoticiaPostadaErro] = useState<boolean>(false);
+
+    useEffect(() => {
         const token = localStorage.getItem('token');
         if (!token) {
-            router.push('http://localhost:3000/login'); 
+            router.push('http://localhost:3000/login');
         } else {
             setRedirecting(false); // Indica que o redirecionamento foi concluído
         }
@@ -54,30 +57,49 @@ export default function Noticias() {
 
             const token = localStorage.getItem('token');
             const response = await axios.post('http://localhost:8080/noticias/cria-noticia', requestData, {
-        headers: {
-            'Content-Type': 'multipart/form-data', 
-            "Authorization": `Bearer ${token}`
-        }
-    });
+                headers: {
+                    'Content-Type': 'multipart/form-data',
+                    "Authorization": `Bearer ${token}`
+                }
+            });
+            setNoticiaPostadaSucesso(true)
             console.log('Response:', response.data);
-        } catch (error:any) {
+        } catch (error: any) {
             console.error('Erro ao cadastrar usuário:', error.response);
+            setNoticiaPostadaErro(true)
         }
     }
-    
+
     return (
         <div className="BoxAdmNoticias">
+            {
+                noticiaPostadaSucesso && (
+                    <div className="DivPopUpVerdeNoticia">
+                        <Image src={"/images/icons/ok.svg"} width={100} height={100} alt="OK" />
+                        <p className="pErroNoticia">Edição postada com sucesso!</p>
+                        <div className="FundoBrancoPopUpNoticia"><button className="botaoFecharVerdeNoticia" onClick={() => setNoticiaPostadaSucesso(false)}> Fechar </button></div>
+                    </div>
+                )
+            }
+            {
+                noticiaPostadaErro && (
+                    <div className="DivPopUpNoticia">
+                        <Image src={"/images/icons/pop-up-erro.svg"} width={100} height={100} alt="Erro" />
+                        <p className="pErro">Não foi possível postar sua edição. Por favor, tente novamente.</p>
+                        <div className="FundoBrancoPopUp"><button className="botaoFecharVermelho" onClick={() => setNoticiaPostadaErro(false)}> Fechar </button></div>
+                    </div>
+                )
+            }
             <h5>Publicar Notícia</h5>
-
             <div className="InputsFormBox">
                 <form className="FormNoticias" onSubmit={EnviarFormParaAPI} >
-                    <input className="InputText" type="text" placeholder="Titulo" value={titulo} onChange={(e) => setTitulo(e.target.value)}  />
-                    <input className="InputSubtitulo" placeholder="Pré-texto" value={subTitulo} onChange={(e) => setSubTitulo(e.target.value)}  />
-                    <label className="PictureLabel" style={{ backgroundImage: selectedFile ? `url(${URL.createObjectURL(selectedFile)})` : 'none', backgroundSize: "contain", backgroundRepeat: "no-repeat", backgroundPosition: "center"}}>
-                        <input type="file" className="pictureInput" onChange={handleFileInputChange}  />
+                    <input className="InputText" type="text" placeholder="Titulo" value={titulo} onChange={(e) => setTitulo(e.target.value)} />
+                    <input className="InputSubtitulo" placeholder="Pré-texto" value={subTitulo} onChange={(e) => setSubTitulo(e.target.value)} />
+                    <label className="PictureLabel" style={{ backgroundImage: selectedFile ? `url(${URL.createObjectURL(selectedFile)})` : 'none', backgroundSize: "contain", backgroundRepeat: "no-repeat", backgroundPosition: "center" }}>
+                        <input type="file" className="pictureInput" onChange={handleFileInputChange} />
                         <span className="SpanText">Enviar Imagem</span>
                     </label>
-                    <textarea className="TextoBox" id="texto-noticia" rows={20} cols={100} placeholder="Digite seu texto" value={selectedTexto} onChange={(e) => setSelectedTexto(e.target.value)}  />
+                    <textarea className="TextoBox" id="texto-noticia" rows={20} cols={100} placeholder="Digite seu texto" value={selectedTexto} onChange={(e) => setSelectedTexto(e.target.value)} />
                     <input type="submit" className="BotaoSubmit" value="Enviar" />
                 </form>
             </div>

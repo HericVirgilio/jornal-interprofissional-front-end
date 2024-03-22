@@ -65,7 +65,69 @@
     font-size: 20px;
     background-color: #58AF9C;
 }
-
+.DivPopUp{
+    border: 1px solid black;
+    width: 350px;
+    height: auto;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #F15757;
+    height: 20vh;
+    padding-top: 15px;
+    border-radius: 10px;
+    z-index: 10;
+}
+.FundoBrancoPopUp{
+    background-color: white;
+    width: 100%;
+    height: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0px 0px 10px 10px;
+    position: absolute;
+    bottom: 0;
+}
+.botaoFecharVermelho {
+    border: none;
+    background-color: #F15757;
+    color: white;
+    padding: 10px;
+    font-size: 20px;
+    border-radius: 10px;
+    font-weight: 900;
+    cursor: pointer;
+}
+.pErro{
+    color: white;
+    font-size: 16px;
+    padding-bottom: 15px;
+}
+.DivPopUpVerde{
+    width: 350px;
+    border: 1px solid black;
+    height: auto;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #96E93C;
+    height: 20vh;
+    padding-top: 15px;
+    border-radius: 10px;
+    z-index: 10;
+}
+.botaoFecharVerde{
+    border: none;
+    background-color: #96E93C;
+    color: white;
+    padding: 10px;
+    font-size: 20px;
+    border-radius: 10px;
+    font-weight: 900;
+}
 @media (min-width: 800px) {
     .LabelImagem{
         height: 30vh;
