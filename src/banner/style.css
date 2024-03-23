@@ -1,66 +1,150 @@
 /* Estilo do container principal do banner */
 .banner-container {
-    position: relative; /* Posição relativa para posicionar elementos filhos relativamente a este */
-    height: 60vh; /* Altura fixa do banner */
-    width: 100%; /* Largura de 100% do contêiner pai (responsivo) */
-    min-width: 100%; /* Garante que a largura máxima seja 100% */
-    overflow: hidden; /* Oculta qualquer conteúdo adicional que ultrapasse o tamanho do contêiner */
+  position: relative;
+  /* Posição relativa para posicionar elementos filhos relativamente a este */
+  height: 50vh;
+  /* Altura fixa do banner */
+  width: 100%;
+  /* Largura de 100% do contêiner pai (responsivo) */
+  min-width: 100%;
+  /* Garante que a largura máxima seja 100% */
+  overflow: hidden;
+  /* Oculta qualquer conteúdo adicional que ultrapasse o tamanho do contêiner */
+}
+
+/* Estilo do slide individual no banner */
+.banner-slide {
+  position: absolute;
+  /* Posição absoluta para sobrepor os slides uns sobre os outros */
+  top: 0;
+  /* Alinha o slide no topo do contêiner */
+  left: 0;
+  /* Alinha o slide à esquerda do contêiner */
+  width: 100%;
+  /* Largura de 100% do contêiner pai */
+  height: 100%;
+  /* Altura de 100% do contêiner pai */
+  display: flex;
+  /* Usa o modelo de layout flexível para centralizar a imagem */
+  justify-content: center;
+  /* Centraliza horizontalmente no contêiner */
+  align-items: center;
+  /* Centraliza verticalmente no contêiner */
+}
+
+/* Estilo da navegação (retângulos) na parte inferior do banner */
+.banner-navigation {
+  position: absolute;
+  /* Posição absoluta para posicionar os retângulos abaixo do banner */
+  bottom: 1.5vh;
+  /* Margem inferior de 10px */
+  width: 100%;
+  /* Largura de 100% do contêiner pai */
+  display: flex;
+  /* Usa o modelo de layout flexível para alinhar os retângulos */
+  justify-content: center;
+  /* Centraliza horizontalmente no contêiner */
+  align-items: center;
+  /* Centraliza verticalmente no contêiner */
+}
+
+/* Estilo dos retângulos na navegação */
+.banner-rectangle {
+  width: 5vh;
+  /* Largura fixa dos retângulos */
+  height: 0.8vh;
+  /* Altura fixa dos retângulos */
+  margin: 0 1vh;
+  /* Margem entre os retângulos */
+  background-color: #61ce70;
+  /* Cor do retângulo inativo (roxo) */
+  cursor: pointer;
+  /* Cursor de ponteiro para indicar que é clicável */
+}
+
+/* Estilo do retângulo ativo na navegação */
+.banner-rectangle.active {
+  background-color: #8A2BE2;
+  /* Cor do retângulo ativo (verde) */
+}
+
+/* Estilo da imagem no slide */
+.banner-image {
+  object-fit: cover;
+  /* Ajusta a imagem para cobrir totalmente o contêiner */
+  width: 100%;
+  /* Largura de 100% do contêiner pai */
+  height: 100%;
+  /* Altura de 100% do contêiner pai */
+}
+
+/* Estilo do video no slide */
+.banner-video {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+@media (max-width: 320px) {
+  .banner-container {
+    height: 17vh;
   }
-  
-  /* Estilo do slide individual no banner */
-  .banner-slide {
-    position: absolute; /* Posição absoluta para sobrepor os slides uns sobre os outros */
-    top: 0; /* Alinha o slide no topo do contêiner */
-    left: 0; /* Alinha o slide à esquerda do contêiner */
-    width: 100%; /* Largura de 100% do contêiner pai */
-    height: 100%; /* Altura de 100% do contêiner pai */
-    display: flex; /* Usa o modelo de layout flexível para centralizar a imagem */
-    justify-content: center; /* Centraliza horizontalmente no contêiner */
-    align-items: center; /* Centraliza verticalmente no contêiner */
-  }
-   
-  /* Estilo da navegação (retângulos) na parte inferior do banner */
-  .banner-navigation {
-    position: absolute; /* Posição absoluta para posicionar os retângulos abaixo do banner */
-    bottom: 2vh; /* Margem inferior de 10px */
-    width: 100%; /* Largura de 100% do contêiner pai */
-    display: flex; /* Usa o modelo de layout flexível para alinhar os retângulos */
-    justify-content: center; /* Centraliza horizontalmente no contêiner */
-    align-items: center; /* Centraliza verticalmente no contêiner */
-  }
-  
-  /* Estilo dos retângulos na navegação */
+
   .banner-rectangle {
-    width: 5vh; /* Largura fixa dos retângulos */
-    height: 1vh; /* Altura fixa dos retângulos */
-    margin: 0 1vh; /* Margem entre os retângulos */
-    background-color: #61ce70; /* Cor do retângulo inativo (roxo) */
-    cursor: pointer; /* Cursor de ponteiro para indicar que é clicável */
-  }
-  
-  /* Estilo do retângulo ativo na navegação */
-  .banner-rectangle.active {
-    background-color:   #8A2BE2; /* Cor do retângulo ativo (verde) */
+    width: 5vh;
+    height: 0.8vh;
   }
 
-   /* Estilo da imagem no slide */
-   .banner-image {
-    object-fit: cover; /* Ajusta a imagem para cobrir totalmente o contêiner */
-    width: 100%; /* Largura de 100% do contêiner pai */
-    height: 100%; /* Altura de 100% do contêiner pai */
+}
+
+@media (min-width: 321px) and (max-width: 375px) {
+
+  .banner-container {
+    height: 20vh;
   }
 
-     /* Estilo do video no slide */
-  .banner-video {
-    object-fit: cover;
-    width: 100%;
-    height: 100%;
+  .banner-rectangle {
+    width: 5vh;
+    height: 1vh;
   }
 
-  @media (max-width: 767px) {
+}
 
-    .banner-container {
-        height: 15vh;
-    }
+@media (min-width: 376px) and (max-width: 425px) {
+  .banner-container {
+    height: 22vh;
+  }
+
+}
+
+@media (min-width: 426px) and (max-width: 768px) {
+  .banner-container {
+    height: 40vh;
+  }
+}
+
+@media (min-width: 1025px) and (max-width: 1440px) {
+  .banner-container {
+    height: 65vh;
+  }
+
+  .banner-rectangle {
+    width: 8vh;
+    height: 1.5vh;
+    margin: 0 1.5vh;
+  }
+
+}
+
+@media (min-width: 1441px) {
+  .banner-container {
+    height: 65vh;
+  }
+
+  .banner-rectangle {
+    width: 8vh;
+    height: 1.2vh;
+    margin: 0 1.5vh;
+  }
 
 }

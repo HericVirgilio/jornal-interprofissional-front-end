@@ -3,10 +3,6 @@
   padding: 0;
 }
 
-html {
-  font-size: 16px;
-}
-
 body {
   overflow-x: hidden;
 }
@@ -25,7 +21,7 @@ body {
   text-align: center;
   margin: 3% 0 3% 0;
   color: #000000;
-  font-size: 5vh;
+  font-size: 3vh;
 }
 
 h2 {
@@ -40,11 +36,57 @@ p {
   color: #7A7A7A;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 320px) {
 
   .titulo-pagina {
-    font-size: 3.5vh;
-    margin: 5vh 0;
+    font-size: 3vh;
   }
 
+}
+
+@media (min-width: 321px) and (max-width: 375px) {
+
+  .titulo-pagina {
+    font-size: 3.2vh;
+  }
+
+}
+
+@media (min-width: 376px) and (max-width: 425px) {
+
+  .titulo-pagina {
+    font-size: 3.2vh;
+  }
+
+}
+
+@media (min-width: 426px) and (max-width: 768px) {
+
+  .titulo-pagina {
+    font-size: 3.2vh;
+  }
+
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+
+  .titulo-pagina {
+    font-size: 3.2vh;
+  }
+
+}
+
+@media (min-width: 1025px) and (max-width: 1440px) {
+
+  .titulo-pagina {
+    font-size: 3.2vh;
+  }
+
+}
+
+@media (min-width: 1441px) and (max-width: 2560px) {
+
+  .titulo-pagina {
+    font-size: 3.2vh;
+  }
 }

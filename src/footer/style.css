@@ -9,19 +9,19 @@
     display: flex;
     left: 0;
     flex-direction: column;
-    height: 30vh;
-    padding: 2vh 15vh 0vh 15vh;
+    height: 20vh;
+    padding: 2vh 15vh 2vh 15vh;
     justify-content: center;
 }
 
 .titulo_rodape {
-    font-size: 4vh;
+    font-size: 2.5vh;
     font-weight: bolder;
-    margin: 1vh 0 3vh 0;
+    margin: 3vh 0 3vh 0;
 }
 
 .lista-rodape {
-    font-size: 2.5vh;
+    font-size: 1.8vh;
     line-height: 2;
     color: #7A7A7A;
     list-style: none;
@@ -38,26 +38,27 @@
     align-items: center;
 }
 
+.link-privacidade a {
+    font-size: 1.8vh;
+}
+
 @media (max-width: 767px) {
 
     .creditos_rodape {
-        font-size: 3vh;
         padding: 5vh 5vh;
     }
 
     .titulo_rodape {
-        font-size: 3vh;
         margin: 2vh 0;
     }   
     
     .coluna-rodape {
         flex-direction: column;
-        font-size: 3vh;
         align-items: start;
     }
 
     .link-privacidade{
-        margin-top: 3vh;
+        margin: 1vh 0 2vh 0;
     }
 
 }

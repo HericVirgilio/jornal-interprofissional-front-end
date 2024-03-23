@@ -8,7 +8,6 @@
     margin: 3vh 4vh 0 0;
 }
 
-
 .menu-hamburger-lista {
     display: flex;
     list-style: none;
@@ -18,7 +17,7 @@
     font-size: 2.5vh;
     font-weight: 600;
     color: #7e8687;
-    padding: 0vh 0vh 0vh 4vh;
+    padding: 0vh 0vh 0vh 2vh;
     text-decoration: none;
 }
 
@@ -29,7 +28,7 @@
 }
 
 .hamburger {
-    display: none;
+    display: block;
     cursor: pointer;
 }
 
@@ -40,35 +39,62 @@
     margin: 6px 0;
 }
 
-@media (max-width: 767px) {
-    .hamburger {
-        display: block;
+.menu-hamburger-lista {
+    display: none;
+}
+
+.menu-hamburger-lista.mobile-open {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 40px;
+    left: 0;
+    width: 100%;
+    background-color: #f7f9fd;
+    z-index: 1;
+}
+
+.menu-hamburger-lista.mobile-open .lista {
+    padding: 8px;
+    border-bottom: 1px solid #ddd;
+}
+
+.menu-hamburger-lista.mobile-open .lista:first-child {
+    border-top: 1px solid #ddd;
+}
+
+@media (max-width: 320px) {
+    .menu-hamburger {
+        margin: 1.8vh 2.5vh 0 0;
     }
 
-    .menu-hamburger-lista {
-        display: none;
+    .bar {
+        width: 20px;
+        height: 2px;
+        margin: 4px 0;
+    }
+}
+
+@media (min-width: 321px) and (max-width: 375px) {
+    .menu-hamburger {
+        margin: 2.3vh 4vh 0 0;
     }
 
     .menu-hamburger-lista.mobile-open {
-        display: flex;
-        flex-direction: column;
-        position: fixed;
-        top: 60px;
-        left: 0;
-        width: 100%;
-        background-color: #f7f9fd;
-        z-index: 1;
+        top: 55px;
     }
 
-    .menu-hamburger-lista.mobile-open .lista {
-        padding: 10px;
-        border-bottom: 1px solid #ddd;
-    }
-
-    .menu-hamburger-lista.mobile-open .lista:first-child {
-        border-top: 1px solid #ddd;
-    }
 }
+
+@media (min-width: 376px) and (max-width: 425px) {
+    .menu-hamburger {
+        margin: 2vh 5vh 0 0;
+    }
+
+    .menu-hamburger-lista.mobile-open {
+        top: 55px;
+    }
+  }
 
 @media (min-width: 768px) {
     .menu-hamburger {
